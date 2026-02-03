@@ -155,8 +155,21 @@ function animateCounters() {
   const counters = document.querySelectorAll('.stat-number');
   
   counters.forEach(counter => {
-    const target = parseInt(counter.textContent.replace(/\D/g, ''));
-    const suffix = counter.textContent.replace(/[0-9]/g, '');
+    const originalText = counter.textContent.trim();
+    
+    // Skip non-numeric values like "24/7", "∞", etc.
+    if (originalText.includes('/') || originalText.includes('∞') || !/\d/.test(originalText)) {
+      return;
+    }
+    
+    const target = parseInt(originalText.replace(/\D/g, ''));
+    const suffix = originalText.replace(/[0-9]/g, '');
+    
+    // Skip if no valid number found
+    if (isNaN(target) || target === 0) {
+      return;
+    }
+    
     const duration = 2000;
     const step = target / (duration / 16);
     let current = 0;

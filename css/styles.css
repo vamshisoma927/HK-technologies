@@ -2,16 +2,16 @@
 :root {
   --primary: #00d4aa;
   --primary-dark: #00a88a;
-  --secondary: #1a1a2e;
-  --dark: #0f0f1a;
-  --darker: #0a0a12;
+  --secondary: #1e3a5f;
+  --dark: #0d1b2a;
+  --darker: #051222;
   --light: #ffffff;
-  --gray: #8892a0;
-  --gray-light: #c5cdd8;
-  --accent: #6c63ff;
-  --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #00a88a 50%, #6c63ff 100%);
-  --gradient-dark: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
-  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --gray: #8ba3c4;
+  --gray-light: #d4e0ed;
+  --accent: #4da6ff;
+  --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #00a88a 50%, #4da6ff 100%);
+  --gradient-dark: linear-gradient(180deg, #0d1b2a 0%, #1e3a5f 100%);
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
   --shadow-glow: 0 0 60px rgba(0, 212, 170, 0.3);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --font-heading: 'Outfit', sans-serif;
@@ -150,7 +150,7 @@ p {
 }
 
 .navbar.scrolled {
-  background: rgba(15, 15, 26, 0.95);
+  background: rgba(13, 27, 42, 0.97);
   backdrop-filter: blur(20px);
   padding: 1rem 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -394,7 +394,7 @@ p {
 }
 
 .service-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 15, 26, 0.9) 100%);
+  background: linear-gradient(145deg, rgba(30, 58, 95, 0.9) 0%, rgba(13, 27, 42, 0.95) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2.5rem;
@@ -606,7 +606,7 @@ p {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-  background: rgba(26, 26, 46, 0.5);
+  background: rgba(30, 58, 95, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   min-width: 150px;
@@ -616,7 +616,7 @@ p {
 .tool-item:hover {
   transform: translateY(-5px);
   border-color: rgba(0, 212, 170, 0.3);
-  background: rgba(26, 26, 46, 0.8);
+  background: rgba(30, 58, 95, 0.8);
 }
 
 .tool-icon {
@@ -773,7 +773,7 @@ p {
 }
 
 .contact-form {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 15, 26, 0.9) 100%);
+  background: linear-gradient(145deg, rgba(30, 58, 95, 0.9) 0%, rgba(13, 27, 42, 0.95) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 24px;
   padding: 3rem;
@@ -982,7 +982,7 @@ p {
 }
 
 .value-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.6) 0%, rgba(15, 15, 26, 0.8) 100%);
+  background: linear-gradient(145deg, rgba(30, 58, 95, 0.7) 0%, rgba(13, 27, 42, 0.85) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2.5rem;
@@ -1020,7 +1020,7 @@ p {
 }
 
 .team-card {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.6) 0%, rgba(15, 15, 26, 0.8) 100%);
+  background: linear-gradient(145deg, rgba(30, 58, 95, 0.7) 0%, rgba(13, 27, 42, 0.85) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2rem;
@@ -1088,7 +1088,7 @@ p {
 }
 
 .service-visual {
-  background: linear-gradient(145deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 15, 26, 0.9) 100%);
+  background: linear-gradient(145deg, rgba(30, 58, 95, 0.9) 0%, rgba(13, 27, 42, 0.95) 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 3rem;
