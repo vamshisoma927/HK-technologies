@@ -99,12 +99,6 @@ const contactForm = document.querySelector('.contact-form form');
 
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-    
     // Simple validation
     let isValid = true;
     const requiredFields = ['name', 'email', 'message'];
@@ -127,28 +121,25 @@ if (contactForm) {
       emailInput.style.borderColor = '#ff4444';
     }
     
-    if (isValid) {
-      // Show success message
-      const btn = this.querySelector('.btn');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="20,6 9,17 4,12"></polyline>
-        </svg>
-        Message Sent!
-      `;
-      btn.style.background = '#00d4aa';
-      
-      // Reset form
-      setTimeout(() => {
-        this.reset();
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-      }, 3000);
-      
-      // Here you would typically send the data to a server
-      console.log('Form submitted:', data);
+    // If validation fails, prevent submission
+    if (!isValid) {
+      e.preventDefault();
+      return false;
     }
+    
+    // Validation passed - show sending state
+    const btn = this.querySelector('.btn');
+    btn.innerHTML = `
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 6v6l4 2"></path>
+      </svg>
+      Sending...
+    `;
+    btn.disabled = true;
+    
+    // Form will submit to Formspree automatically
+    // No need to prevent default - let it submit!
   });
   
   // Remove error styling on input
